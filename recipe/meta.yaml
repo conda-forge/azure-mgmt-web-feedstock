@@ -1,13 +1,13 @@
 {% set name = "azure-mgmt-web" %}
-{% set version = "7.1.0" %}
+{% set version = "7.3.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
-  sha256: 5b16cde7e30dc20466b911ffbc49a57258c7ef2958472c4dcf612ff1a012f15c
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 87b771436bc99a7a8df59d0ad185b96879a06dce14764a06b3fc3dafa8fcb56b
 
 build:
   noarch: python
