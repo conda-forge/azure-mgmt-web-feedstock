@@ -6,25 +6,27 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
   sha256: 5b16cde7e30dc20466b911ffbc49a57258c7ef2958472c4dcf612ff1a012f15c
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >3.0
+    - python {{ python_min }}
     - pip
   run:
-    - python >3.0
+    - python >={{ python_min }}
     - azure-common ~=1.1
     - azure-mgmt-core >=1.2.0,<2.0.0
     - msrest >=0.6.21
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - azure
     - azure.mgmt
