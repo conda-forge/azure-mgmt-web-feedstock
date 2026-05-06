@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: azure-mgmt-web
-  version: 10.1.0
+  version: 11.0.0
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 26d3594bbe1b30589b72922c35855bc5b74c151f0224147a60d1a75234859226
+  sha256: 1f98b29283ecb9c36ede7309c0da8d26db0455d77ae37e1cb6cdcd244044d6de
 
 build:
   number: 0
@@ -26,7 +26,7 @@ requirements:
     - python >=${{ python_min }}
     - azure-mgmt-core >=1.6.0
     - typing_extensions >=4.6.0
-    - msrest >=0.7.1
+    - isodate >=0.6.1
 tests:
   - python:
       imports:
