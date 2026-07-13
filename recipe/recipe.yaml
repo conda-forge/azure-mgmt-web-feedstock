@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: azure-mgmt-web
-  version: 11.0.0
+  version: "11.0.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 1f98b29283ecb9c36ede7309c0da8d26db0455d77ae37e1cb6cdcd244044d6de
+  sha256: 1ce8ed7fd69e1dd4c820a29765643e9394b58f428b501336413d517c027a1459
 
 build:
   number: 0
