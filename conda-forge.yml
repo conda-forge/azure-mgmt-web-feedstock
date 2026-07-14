@@ -7,5 +7,5 @@ conda_build:
 conda_install_tool: pixi
 conda_build_tool: rattler-build
 bot:
-  automerge: false
+  automerge: true
   inspection: update-grayskull
